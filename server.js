@@ -52,7 +52,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
                 .catch(error => console.error(error));
         })
 
-        app.post('/toys/:id', (req, res) => {
+        app.post('/edit/:id', (req, res) => {
             const toyId = parseInt(req.params.id);
             toysCollection.findOneAndUpdate(
                 { toyId: toyId },
@@ -68,7 +68,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
                 .catch(error => console.error(error))
         })
 
-        app.delete('/toys/:id', (req, res) => {
+        app.delete('/delete/:id', (req, res) => {
             const toyId = parseInt(req.params.id);
             toysCollection.findOneAndDelete(
                 { toyId: toyId },
