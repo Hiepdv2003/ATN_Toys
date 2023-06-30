@@ -17,7 +17,7 @@
 
             <div class="home-content">
                 <div class="section__body">
-                    <h1>Products</h1>
+                    <h1>Toys List</h1>
                     <div class="main-content">
                         <a href="/add" class="btn add">
                             <i class="fa-solid fa-plus"></i>
@@ -50,13 +50,13 @@
                                         <td data-title="Price">$<%= toys[i].price %>
                                         </td>
                                         <td data-title="Edit">
-                                            <a href="/edit/<%= toys[i].toyId %>" class="btn edit">
+                                            <a href="/edit/<%= toys[i]._id %>" class="btn edit">
                                                 <i class="fa-solid fa-pen-to-square"></i>
                                                 Edit
                                             </a>
                                         </td>
                                         <td data-title="Delete">
-                                            <a href="/delete/<%= toys[i].toyId %>" class="btn delete"
+                                            <a href="/delete/<%= toys[i]._id %>" class="btn delete"
                                                 onclick="confirmation(event)">
                                                 <i class="fa-solid fa-trash"></i>
                                                 Delete
